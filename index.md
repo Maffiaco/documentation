@@ -10,7 +10,7 @@
 
 - Updating `OrderPayment` will create an amending OrderPayment with difference amount instead direct updating.
 
-  https://github.com/Maffiaco/documentation/assets/61538368/75da1cfe-5b66-4ede-a8de-f6f99b516ab2
+ <video src="https://github.com/Maffiaco/documentation/assets/61538368/75da1cfe-5b66-4ede-a8de-f6f99b516ab2"></video>
 
   Edit payment form with disabled type. To change type, we must delete the old payment to create new payment with different type.
 
