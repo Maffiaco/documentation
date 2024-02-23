@@ -4,13 +4,13 @@
 
 - Deleting `OrderPayment` will create an amending reverse OrderPayment instead of deleting.
 
-  <img width="400" alt="Deleted payment" src="https://github.com/Maffiaco/team/assets/1776416/d5da5cf3-3f22-4263-b278-0a14ef70ce95">
+  <img width="400" alt="image" src="https://github.com/Maffiaco/documentation/assets/61538368/295bf3a5-443c-4178-b50d-1efb79652afa">
 
   Deleted payment shown with reason "Manualy deleted" without action.
 
 - Updating `OrderPayment` will create an amending OrderPayment with difference amount instead direct updating.
 
-  <img width="400" alt="Edit payment form with disabled payment type" src="https://github.com/Maffiaco/team/assets/1776416/4f9d0038-4cd3-4093-807f-9c21ad80681e">
+  https://github.com/Maffiaco/documentation/assets/61538368/75da1cfe-5b66-4ede-a8de-f6f99b516ab2
 
   Edit payment form with disabled type. To change type, we must delete the old payment to create new payment with different type.
 
