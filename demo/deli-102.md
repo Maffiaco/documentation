@@ -3,17 +3,14 @@
 ### [AV] Change OrderPayment update flow
 
 - Deleting `OrderPayment` will create an amending reverse OrderPayment instead of deleting.
-
-  <img width="400" alt="image" src="https://github.com/Maffiaco/documentation/assets/61538368/295bf3a5-443c-4178-b50d-1efb79652afa">
+  <img width="400" alt="Deleted payment" src="https://github.com/Maffiaco/team/assets/1776416/d5da5cf3-3f22-4263-b278-0a14ef70ce95">
 
   Deleted payment shown with reason "Manualy deleted" without action.
 
 - Updating `OrderPayment` will create an amending OrderPayment with difference amount instead direct updating.
-
- <video width="600" controls src="https://github.com/Maffiaco/documentation/assets/61538368/75da1cfe-5b66-4ede-a8de-f6f99b516ab2"></video>
+  <img width="400" alt="Edit payment form with disabled payment type" src="https://github.com/Maffiaco/team/assets/1776416/4f9d0038-4cd3-4093-807f-9c21ad80681e">
 
   Edit payment form with disabled type. To change type, we must delete the old payment to create new payment with different type.
-
   <img width="400" alt="Amending payment" src="https://github.com/Maffiaco/team/assets/1776416/e93f2540-686f-4c97-a4b9-735a20ec5730">
 
   Amending payment shown different amount with reason.
@@ -25,7 +22,7 @@ On product list, if brand > 10, some brands are show empty product list.
 Rootcause: On product query, we limit only 10 brands.
 Fix: Get all brands
 
-  <img width="400" alt="Missing products on product list" src="https://github.com/Maffiaco/team/assets/1776416/ee0aeb9a-e190-4cc3-9d7c-0e27b9c3c623">
+<img width="400" alt="Missing products on product list" src="https://github.com/Maffiaco/team/assets/1776416/ee0aeb9a-e190-4cc3-9d7c-0e27b9c3c623">
 
 ### 🚀 [AV] Fix [DELIANY-1955](https://deliany.youtrack.cloud/issue/DELIANY-1955/Sub-total-in-edit-view-excludes-voided-items) wrong subtotal in edit order in POS
 
@@ -33,11 +30,11 @@ Before, subtotal in edit order counts voided item. Fix: excluded voided item in 
 
 Booking detail:
 
-  <img width="400" alt="Booking detail" src="https://github.com/Maffiaco/team/assets/1776416/be40acc4-4367-462c-b778-babbf5518720">
+<img width="400" alt="Booking detail" src="https://github.com/Maffiaco/team/assets/1776416/be40acc4-4367-462c-b778-babbf5518720">
 
 Edit order:
 
-  <img width="400" alt="Edit order" src="https://github.com/Maffiaco/team/assets/1776416/b70756c2-b984-4289-9514-52c40b219088">
+<img width="400" alt="Edit order" src="https://github.com/Maffiaco/team/assets/1776416/b70756c2-b984-4289-9514-52c40b219088">
 
 ### 🚀 [QH] Improve UI Print bill on POS
 
@@ -46,11 +43,11 @@ Edit order:
 - The borders and spacing between lines in the table should be removed.
 - The page margins should be reduced by half.
 
-  <img width="400" alt="Split bill" src="https://github.com/Maffiaco/team/assets/33405334/3d92dbb3-032f-4bbc-b4c2-01c86d3557a9">
+<img width="400" alt="Split bill" src="https://github.com/Maffiaco/team/assets/33405334/3d92dbb3-032f-4bbc-b4c2-01c86d3557a9">
 
 ### 🚀 [QH] Fix [DELIANY-1956](https://deliany.youtrack.cloud/issue/DELIANY-1956/Bug-Wrong-number-of-addition-in-split-bill) wrong number of addition in split bill
 
-  <img width="400" alt="image" src="https://github.com/Maffiaco/team/assets/33405334/e50f7a4f-c96f-48e4-954c-621f073b52ae">
+<img width="400" alt="image" src="https://github.com/Maffiaco/team/assets/33405334/e50f7a4f-c96f-48e4-954c-621f073b52ae">
 
 ### 🚀 [QH] Fix [DELIANY-1953](https://deliany.youtrack.cloud/issue/DELIANY-1953/Bug-Lack-of-item-in-split-bill) Lack of item in split bill
 
@@ -59,19 +56,16 @@ If a user is splitting a bill and another user is adding items to the order, the
 ### [QH] [DELIANY-1957](https://deliany.youtrack.cloud/issue/DELIANY-1957/Enhance-generate-OTP-confirm-code) Enhance - generate OTP confirm code
 
 When a user updates the role of an account in the Back-Office
-
-  <img width="400" alt="Screenshot 2024-02-20 at 08 05 14" src="https://github.com/Maffiaco/team/assets/33405334/29ef76c6-be6a-436e-bcde-ee7622d1b9e3">
+<img width="400" alt="Screenshot 2024-02-20 at 08 05 14" src="https://github.com/Maffiaco/team/assets/33405334/29ef76c6-be6a-436e-bcde-ee7622d1b9e3">
 
 Previously, the user's confirm_code will be regenerated
-
-  <img width="400" alt="Screenshot 2024-02-20 at 08 10 20" src="https://github.com/Maffiaco/team/assets/33405334/c7bc497d-5d21-4893-a1a6-330d34db8666">
+<img width="400" alt="Screenshot 2024-02-20 at 08 10 20" src="https://github.com/Maffiaco/team/assets/33405334/c7bc497d-5d21-4893-a1a6-330d34db8666">
 
 Currently, accounts that already have a confirm_code will not be regenerated.
 
 ### [KHOA] [DELIANY-1911](https://deliany.youtrack.cloud/issue/DELIANY-1911/KDS-improvement-Improve-log-in-session-to-not-mismatch-with-other-apps) Improve log-in session to not mismatch with other apps
 
 - Create service-account when create a prepstation
-
   <img width="400" alt="Create service account" src="https://github.com/Maffiaco/team/assets/61538368/5b9b3b5e-3522-49b9-9adf-c6d4c6a92a5a">
 
 - Use service user to login if user does not exist show error
@@ -79,7 +73,7 @@ Currently, accounts that already have a confirm_code will not be regenerated.
 
 - If login session conflict, logout the first session
 
-<video src="https://github.com/Maffiaco/team/assets/61538368/790c0842-1385-467d-aea2-2e8df74179d2"></video>
+  <video src="https://github.com/Maffiaco/team/assets/61538368/790c0842-1385-467d-aea2-2e8df74179d2"></video>
 
 ### [KHOA] [DELIANY-1908](https://deliany.youtrack.cloud/issue/DELIANY-1908/Mobile-Tet-theme-on-mobile) Tet theme on mobile
 
