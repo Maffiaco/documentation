@@ -1,1 +1,0 @@
-## Sprint DEL-103
