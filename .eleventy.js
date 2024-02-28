@@ -20,6 +20,6 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "documentation",
+    pathPrefix: "/documentation/",
   }
 };
