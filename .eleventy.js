@@ -3,7 +3,7 @@ const { JSDOM } = jsdom;
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("demos", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("demos/deli-*.md").reverse();
+    return collectionApi.getFilteredByGlob("demos/del-*.md").reverse();
   });
   eleventyConfig.addShortcode("sprintTitle", function (sprintContent) {
     const dom = new JSDOM(sprintContent);
