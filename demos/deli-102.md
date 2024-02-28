@@ -81,9 +81,7 @@ Currently, accounts that already have a confirm_code will not be regenerated.
   <img width="1679" alt="image" src="https://github.com/Maffiaco/documentation/assets/1776416/efe3d889-c432-4b91-b1db-e50b636a8423">
 
 - If login session conflict, logout the first session
-
- <video src="https://github.com/Maffiaco/documentation/assets/1776416/30c3154b-0e06-49fb-bf9c-ea58166f2c30"></video>
- 
+  ![308472576-30c3154b-0e06-49fb-bf9c-ea58166f2c30](https://github.com/Maffiaco/documentation/assets/1776416/1390c021-9f7c-48ca-8cbe-6dd91e216c84) 
 
 ### [KHOA] [DELIANY-1908](https://deliany.youtrack.cloud/issue/DELIANY-1908/Mobile-Tet-theme-on-mobile) Tet theme on mobile
 
@@ -139,8 +137,7 @@ After:
 ### [Dat] [DELIANY-1965](https://deliany.youtrack.cloud/issue/DELIANY-1965/Improve-slug-in-Locations-settings-not-overwrite-when-update-location-name) Improve slug in Locations settings: not overwrite when update location name
 
 - Not auto-generate slug when editing location name in Back-office.
-
-<video src="https://github.com/Maffiaco/documentation/assets/1776416/96c86afe-8721-49ff-9125-6a63521d7bd7" />
+  ![308488182-96c86afe-8721-49ff-9125-6a63521d7bd7](https://github.com/Maffiaco/documentation/assets/1776416/389eebf7-f673-4c56-8ec1-c737edb581ce)
 
 ### [Dat] [DELIANY-1966](https://deliany.youtrack.cloud/issue/DELIANY-1966/Improvement-Show-opening-hour-of-the-day) Show opening hour of the day
 
