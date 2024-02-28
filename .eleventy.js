@@ -1,5 +1,5 @@
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addCollection("delis", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("demo/deli-*.md");
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addCollection("demos", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("demos/deli-*.md");
   });
 };
