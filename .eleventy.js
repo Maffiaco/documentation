@@ -18,4 +18,8 @@ module.exports = function (eleventyConfig) {
       return releasedItem.includes("🚀")
     });
   });
+
+  return {
+    pathPrefix: "documentation",
+  }
 };
