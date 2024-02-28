@@ -3,15 +3,18 @@
 ### [AV] Change OrderPayment update flow
 
 - Deleting `OrderPayment` will create an amending reverse OrderPayment instead of deleting.
-  <img width="400" alt="Deleted payment" src="https://github.com/Maffiaco/team/assets/1776416/d5da5cf3-3f22-4263-b278-0a14ef70ce95">
+  <img width="400" alt="image" src="https://github.com/Maffiaco/documentation/assets/1776416/bae72ffe-421d-4bae-8f94-3b08b1e393fd">
+
 
   Deleted payment shown with reason "Manualy deleted" without action.
 
 - Updating `OrderPayment` will create an amending OrderPayment with difference amount instead direct updating.
-  <img width="400" alt="Edit payment form with disabled payment type" src="https://github.com/Maffiaco/team/assets/1776416/4f9d0038-4cd3-4093-807f-9c21ad80681e">
+  <img width="400" alt="image" src="https://github.com/Maffiaco/documentation/assets/1776416/08c0c89b-ffe0-446e-871d-73a940c56afe">
+
 
   Edit payment form with disabled type. To change type, we must delete the old payment to create new payment with different type.
-  <img width="400" alt="Amending payment" src="https://github.com/Maffiaco/team/assets/1776416/e93f2540-686f-4c97-a4b9-735a20ec5730">
+  <img width="400" alt="image" src="https://github.com/Maffiaco/documentation/assets/1776416/0a508553-8699-4412-9ba0-187890a12ed0">
+
 
   Amending payment shown different amount with reason.
   i.e. this case, order are paid fully `11.405.237 ₫`, then editted to `10.000.000 ₫`. We'll record an amending refund payment of `1.405.237 ₫`.
@@ -73,7 +76,8 @@ Currently, accounts that already have a confirm_code will not be regenerated.
 
 - If login session conflict, logout the first session
 
-  <video src="https://github.com/Maffiaco/team/assets/61538368/790c0842-1385-467d-aea2-2e8df74179d2"></video>
+ <video src="https://github.com/Maffiaco/documentation/assets/1776416/30c3154b-0e06-49fb-bf9c-ea58166f2c30"></video>
+ 
 
 ### [KHOA] [DELIANY-1908](https://deliany.youtrack.cloud/issue/DELIANY-1908/Mobile-Tet-theme-on-mobile) Tet theme on mobile
 
