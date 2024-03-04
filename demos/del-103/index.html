@@ -95,14 +95,15 @@ Get all items before submitting and attach them to the payload along with the ne
 <img width="400" alt="Screenshot 2024-03-03 at 21 25 27" src="https://github.com/Maffiaco/documentation/assets/33405334/7e1736bd-7957-4392-be8f-1b14f2b4e9f3">
 <h1>[DatVTP]</h1>
 <h3><a href="https://deliany.youtrack.cloud/issue/DELIANY-1971/Prod-Error-page-when-clicking-Order-Now-of-Backroom">DELIANY-1971</a> Error page when clicking &quot;Order Now&quot; of Backroom 🚀</h3>
-<p>In &quot;Discover Now&quot; page -&gt; &quot;Dine-in&quot; tab -&gt; Select &quot;Order Now&quot; button of Backroom Thao Dien.
-Then get error 500 - Internal Server Error.
-Expect: hide &quot;Order Now&quot; button of this brand.</p>
-<p>Root Cause: because the backroom brand does not have <code>brandSlug</code>.
-Fix: Add <code>brandSlug</code> into the showing condition of the <code>Order Now</code> button.</p>
+<p>In &quot;Discover Now&quot; page -&gt; &quot;Dine-in&quot; tab -&gt; Select &quot;Order Now&quot; button of Backroom Thao Dien.<br />
+Then get error 500 - Internal Server Error.<br />
+Expect: hide &quot;Order Now&quot; button of this brand.<br />
+<br />
+Root Cause: because the backroom brand does not have <code>brandSlug</code>.<br />
+Fix: Add <code>brandSlug</code> into the showing condition of the <code>Order Now</code> button.<br /></p>
 <img width="400" alt="image" src="https://github.com/Maffiaco/documentation/assets/51017791/54b86847-936d-4c54-a68c-be63496b48fd">
 <h3><a href="https://deliany.youtrack.cloud/issue/DELIANY-1989/Update-text-You-can-schedule-for-later">DELIANY-1989</a> Update text &quot;You can schedule for later&quot; 🚀</h3>
-<p>Expect: update &quot;Bạn có thể đặt món trước&quot; to &quot;Bạn có thể đặt món/đặt bàn trước&quot; for closing location for VI lang.</p>
+<p>Expect: update &quot;Bạn có thể đặt món trước&quot; to &quot;Bạn có thể đặt món/đặt bàn trước&quot; for closing location for VI lang.<br /></p>
 <img width="800" alt="image" src="https://github.com/Maffiaco/documentation/assets/51017791/7794e26a-0af5-446a-bb04-41303c49dadd">
 <h3><a href="https://deliany.youtrack.cloud/issue/DELIANY-1988/iPad-Enhance-UI-add-edit-view-on-POS">DELIANY-1988</a> [iPad] Enhance UI add/edit view on POS 🚀</h3>
 <ol>
@@ -152,16 +153,16 @@ After:
 </details>
 <h3><a href="https://deliany.youtrack.cloud/issue/DELIANY-1996/POS-Bug-Order-slip-is-auto-sent-to-KDS-when-user-edit-item-in-Edit-View-click-button-Save">DELIANY-1996</a> [POS - Bug] Order slip is auto sent to KDS when user edit item in Edit View &amp; click button Save</h3>
 <p>Steps:</p>
-<p>Open Add order for booking
-Click &quot;Save &amp; Send&quot; (not added items yet)
-Add items for order
-Click &quot;Save&quot;
-Then items auto sent to KDS</p>
-<p>Expect: Save items and not sent to KDS in this scenario</p>
+<p>Open Add order for booking<br />
+Click &quot;Save &amp; Send&quot; (not added items yet)<br />
+Add items for order<br />
+Click &quot;Save&quot;<br />
+Then items auto sent to KDS<br /></p>
+<p>Expect: Save items and not sent to KDS in this scenario<br /></p>
 <p>Fix: Disable submit buttons when there is no new item.</p>
 <img width="800" alt="image" src="https://github.com/Maffiaco/sicily/assets/51017791/bd51c6eb-9584-49b0-ab4c-c046f8b9bbe6">
 <h3><a href="https://deliany.youtrack.cloud/issue/DELIANY-1997/Enhance-Not-show-deactivated-product-when-add-to-Category">DELIANY-1997</a> Enhance - Not show deactivated product when add to Category</h3>
-<p>Currently, when user adds products to the Category, displays deactivated products. It's easy to get confused.
+<p>Currently, when user adds products to the Category, displays deactivated products. It's easy to get confused. <br />
 Expect: Not show deactivated product when add to Category on BO and Biz app.</p>
 <img width="800" alt="image" src="https://github.com/Maffiaco/sicily/assets/51017791/230425e4-f36e-44f2-8c6a-e556a1fa3fa7">
 <img width="800" alt="image" src="https://github.com/Maffiaco/sicily/assets/51017791/84c115b2-dd30-4353-886b-a3d14b5d7e5e">
