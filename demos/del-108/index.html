@@ -87,6 +87,30 @@ We'll remove <code>deals.estimated_deal_value</code> after if possible.</li>
 <img width="800" alt="Screenshot 2024-05-20 at 11 44 25" src="https://github.com/Maffiaco/documentation/assets/33405334/c69e9eb2-3527-46f9-a2d1-720e4dd1ce52">
 <h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2127/POS-Improvement-Open-number-field-in-add-item-view">DELIANY-2127</a> Open number field in add item view</h3>
 <img width="800" alt="Screenshot 2024-05-20 at 14 53 32" src="https://github.com/Maffiaco/documentation/assets/33405334/7398a79b-e32a-4a51-8f9a-7bae2442b7de">
+<h3>[Dat] [BIZ] Allow staffs &amp; above to view CRM which they're owner 🚀</h3>
+<ul>
+<li>Show CRM section in BIZ.</li>
+<li>Allow current log-in user to view his contacts which he's the owner.</li>
+<li>Allow user to edit info of the contacts.</li>
+<li>Allow user to search contacts belong to him.</li>
+</ul>
+<h3>[Dat] Generate new confirm code when Save system user</h3>
+<p>When save or edit any information of system user, the Confirm code in pos_admins table genarare to new code of this user.
+Expect: keep the confirm code fix by location</p>
+<h3>[Dat] [POS] Not allow user to void + add items after confirming order</h3>
+<p>Current:
+After user confirm order, user still can void items in tab SENT</p>
+<p>Expect:</p>
+<ol>
+<li>When user click void icon in tab SENT:
+Show error message or warning that user cannot action after order confirmed
+<img width="1000" alt="image" src="https://github.com/Maffiaco/documentation/assets/51017791/03bfbfad-155c-4f95-97c5-3e555236aff4"></li>
+</ol>
+<p>Hide icon trash bin in tab Sent so that user cannot touch to void
+<img width="1000" alt="image" src="https://github.com/Maffiaco/documentation/assets/51017791/8f4821b1-86cf-4cb6-a583-84b4a375108f"></p>
+<ol start="3">
+<li>Not allow add items in Orders tab in tab browser if another tab has already confirmed order</li>
+</ol>
 
     </div>
   </body>
