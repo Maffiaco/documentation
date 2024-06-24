@@ -68,6 +68,31 @@
   <body>
     <div class="content">
       <h2>Sprint DEL-110</h2>
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2177/Bug-Cant-Save-again-when-submitting-invalid-number-of-guest">DELIANY-2177</a> Can't Save again when submitting invalid number of guest</h3>
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2181/POSBug-Cant-login-after-input-wrong-POS-code">DELIANY-2181</a> Can't login after input wrong POS code</h3>
+<p>Fix the issue where the button locks after submission but the request fails.</p>
+<h3>[QH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-2180/Turn-off-Shopeepay-payment-method">DELIANY-2180</a> Turn off Shopeepay payment method</h3>
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2186/POS-Bug-Booking-is-opened-again-after-completed">DELIANY-2186</a> Bug Booking is opened again after completed</h3>
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2190/POS-Not-allow-user-to-change-status-after-booking-order-confirmed">DELIANY-2190</a> Not allow user to change status after booking order confirmed</h3>
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2191/POS-Bug-Status-changed-into-seated-if-user-cancel-confirmed">DELIANY-2191</a> Status changed into seated if user cancel confirmed</h3>
+<p>Update reservation status on POS based on the following rules:</p>
+<ul>
+<li><code>Awaiting Payment</code>: Can only be updated to <code>Completed</code>.</li>
+<li><code>Completed</code>: No further status updates allowed.</li>
+<li>Remaining statuses can be transitioned between each other.
+The FE will disable status change buttons on the detailed interface.</li>
+</ul>
+<img width="600" alt="Screenshot 2024-06-24 at 19 38 43" src="https://github.com/Maffiaco/documentation/assets/33405334/c70910a4-240a-45a1-a41e-fb2e95ba133d">
+<h3>[QH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-2150/BizAdd-page-Attachment-file-upload">DELIANY-2150</a> Attachment file upload</h3>
+<ul>
+<li>Restructure the booking creation page.</li>
+<li>Allow file attachments during booking creation, but only send attached files upon confirmation.</li>
+</ul>
+<img width="400" alt="Screenshot 2024-06-21 at 16 53 18" src="https://github.com/Maffiaco/documentation/assets/33405334/efd871a5-0c3c-475c-b1dc-a642cdaa20a3">
+<img width="600" alt="Screenshot 2024-06-20 at 14 44 42" src="https://github.com/Maffiaco/documentation/assets/33405334/3f1ea180-60d5-4407-aa98-17dc4f3b368f">
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2188/POS-Show-attachments-in-Reservations">DELIANY-2188</a> Show attachments in Reservations</h3>
+<img width="600" alt="Screenshot 2024-06-20 at 08 49 39" src="https://github.com/Maffiaco/documentation/assets/33405334/407fbeb0-6a14-479a-a86d-17370dcd74c2">
+<h3>[QH] Further enhance and test the new bill-splitting functionality.</h3>
 <h3>[Dat] 🚀 POS - Hide View Report option for staff role</h3>
 <img width="1000" alt="image" src="https://github.com/Maffiaco/documentation/assets/51017791/e4d384d5-7fe1-434f-a600-d0716e293da8">
 <h3>[Dat] 🚀 POS - Update deposit copy and calculate payment</h3>
