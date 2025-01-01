@@ -121,6 +121,70 @@
 <li>Deals</li>
 <li>Bookings</li>
 </ul>
+<h3>[TP] 🐛 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-2364">DELIANY-2364</a>  🐛 Product Card Layout Issues in Promotion Carousel [UI]</h3>
+<p><strong>Location:</strong> Homepage &gt; Promotion Section (&quot;Khuyến mãi&quot;) carousel
+<strong>Environment:</strong> Web browser (fivestar.deliany.co) , (https://www.dpomm.vn/)</p>
+<p><strong>Current Issues:</strong></p>
+<ul>
+<li>Price &quot;12.000 đ&quot; and &quot;Đã bán 15.7&quot; information misalignment</li>
+<li>Inconsistent description area height</li>
+<li>Layout shifts due to variable description length</li>
+<li>Uncontrolled text wrapping</li>
+<li>Inconsistent element spacing</li>
+</ul>
+<p><strong>Required Changes:</strong></p>
+<ul>
+<li>Implement fixed minimum height (2 lines) for description area</li>
+<li>Add text truncation with ellipsis (...) for descriptions exceeding 2 lines</li>
+<li>Maintain consistent spacing between card elements</li>
+<li>Preserve layout structure regardless of description length</li>
+</ul>
+<p>&lt;</p>
+<br />
+<h3>[TP] 🐛 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2429/Addition-Groups-tab-Products-Product-list-only-shows-10-products">DELIANY-2429</a> Product list limited to 10 products in Addition Groups</h3>
+<ul>
+<li>Fix pagination issue in Addition Groups / Products tab</li>
+<li>Ensure product list displays all available products beyond the 10-item limit</li>
+</ul>
+<br />
+<h3>[QH] 🐛 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-2410">DELIANY-2429</a> Products do not display according to brand when switching between brand tabs</h3>
+<p><strong>Environment:</strong> https://www.dpomm.vn/</p>
+<p><strong>Current Issues:</strong></p>
+<ul>
+<li>Products do not display correctly when switching between brand tabs</li>
+<li>Console error: <code>TypeError: A.brand is undefined</code></li>
+<li>Product list only shows 10 products in Addition Groups / Products tab</li>
+</ul>
+<p><strong>Required Changes:</strong></p>
+<ul>
+<li>Fix brand filtering functionality</li>
+<li>Resolve brand undefined error</li>
+<li>Fix pagination to display all available products</li>
+</ul>
+<br />
+<h3>[TP] 🐛 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-2445">DELIANY-2445</a> Check duplicate Supplier Name in Supplier Setup</h3>
+<p><strong>Location:</strong> BIZ &gt; Inventory Management &gt; Supplier Setup</p>
+<p><strong>Feature Requirements:</strong></p>
+<ul>
+<li>Implement real-time duplicate checking while typing supplier names</li>
+<li>Show suggestions for potential matches (partial or full)</li>
+<li>Display matching suppliers beneath the input field</li>
+<li>Validate duplicates during both creation and editing of suppliers</li>
+</ul>
+<br />
+<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-2428">DELIANY-2428</a> Remove default sales channels from merchant PPath</h3>
+<p><strong>Sales channels to remove:</strong></p>
+<ul>
+<li>Loship</li>
+<li>ShopeeFood</li>
+<li>ShopeeFresh</li>
+<li>Now</li>
+<li>Gofood</li>
+<li>Baemin</li>
+<li>Grab</li>
+<li>Befood</li>
+</ul>
+<br />
 
     </div>
   </body>
