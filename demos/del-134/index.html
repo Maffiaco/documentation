@@ -104,6 +104,28 @@
 <li><a href="https://deliany.youtrack.cloud/issue/DELIANY-2677">DELIANY-2677</a> Delivery provider Ahamove</li>
 <li><a href="https://deliany.youtrack.cloud/issue/DELIANY-2678">DELIANY-2678</a> Delivery provider Lalamove</li>
 </ul>
+<h3>[Nam] [WIP]<a href="https://deliany.youtrack.cloud/issue/DELIANY-2626">DELIANY-2626</a> Provide a solution for user to create shortcut to app</h3>
+<p>The major purpose is to allow for smooth, uninterrupted printing without requiring a confirmation dialog each time a print action is performed.</p>
+<ul>
+<li><strong>Expectation</strong>: Give users a button that allows them to quickly establish a shortcut to the app on their device.</li>
+<li><strong>Suggested solution</strong>: Use Google Chrome's <code>kiosk</code> mode, which can bypass the native print confirmation window, providing a more smooth printing experience.</li>
+<li><strong>Proposed implementation</strong>: Create a lightweight Electron-based wrapper for our web application.  Users can download and install (or execute directly) this standalone application, which functions as a dedicated client, allowing for shortcut creation and optimized printing behavior.</li>
+</ul>
+<h4>Pros</h4>
+<ul>
+<li>Quick and easy installation: Users may download and set up the app with little effort.</li>
+<li>Cross-platform compatibility: Electron enables us to create and distribute binaries for several operating systems (Windows, macOS, and Linux) with a single codebase.</li>
+<li>Deeper system access: The app can interact with native system capabilities more directly than a browser-based app, frequently without the need for cumbersome permission workflows – for example, accessing the camera, microphone, speakers, and so on.</li>
+<li>Bypass browser limitations: Using Electron, we can avoid browser-imposed constraints such as print dialogs, giving us more control over the user experience.</li>
+<li>Supports auto-launch and desktop integrations: We may include native features such as auto-start on boot, system tray, and desktop notifications.</li>
+</ul>
+<h4>Cons/Areas for Improvement</h4>
+<ul>
+<li>Installation is required: Users must install the app locally, which may cause friction for some.  The size is pretty large - approximately 260MB on MacOS.</li>
+<li>Code signing requirements: To enable features such as auto-updates or update notifications on macOS, the app must be signed, which necessitates additional setup (Apple Developer account, certificate management, CI/CD signing, etc.).</li>
+<li>Electron programs are noted for being resource-intensive, as they include Chromium and Node.js, which can consume more RAM and CPU than native counterparts.</li>
+<li>Security considerations: Because we are bundling online content in a desktop shell, we must take extra precautions to sandbox untrusted input and avoid security concerns such as remote code execution or privilege escalation.</li>
+</ul>
 
     </div>
   </body>
