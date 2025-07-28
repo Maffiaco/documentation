@@ -68,6 +68,45 @@
   <body>
     <div class="content">
       <h2>Sprint DEL-139</h2>
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2806">DELIANY-2806</a> Some inventory items show quantity 0 in the Receipt Summary after being added</h3>
+<ul>
+<li>Issue: The issue occurs when validating the <code>quantity</code> from <code>inventorySupplier</code>. If a quantity is provided, that value will be used instead of defaulting to 1.</li>
+<li>Solution: It starts at 1 when an item is added.</li>
+</ul>
+<img width="600" height="688" alt="image" src="https://github.com/user-attachments/assets/f29bfa85-aadb-4123-9915-8a68efde6b87" />
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2811">DELIANY-2811</a> Create static page &quot;Chính Sách Bảo Mật Thông Tin&quot;</h3>
+<ul>
+<li>Create static pages for policies and information security.</li>
+</ul>
+<img width="600" height="883" alt="image" src="https://github.com/user-attachments/assets/e3126608-56fa-44c1-a7ef-5f53a51643f4" />
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2828">DELIANY-2828</a> Updates on Location are not displayed correctly</h3>
+<ul>
+<li>Issue: When navigating from the location details to the edit page, performing an update, and then returning. The details drawer remains open, causing outdated location information to be displayed.</li>
+<li>Solution: Unmount the details drawer when exiting the page.</li>
+</ul>
+<h3>[QH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-2770">DELIANY-2770</a> Addition groups display radio buttons instead of checkboxes on mobile devices/responsive view</h3>
+<ul>
+<li>Solution: Synchronize the logic from <code>QR Order</code> with <code>Add Food</code> functionality from reservations in POS.</li>
+</ul>
+<h3>[QH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-2817">DELIANY-2817</a> Some product add buttons disabled on location page</h3>
+<ul>
+<li>Issue: The issue is caused by the product's status on the <code>productOutlet</code> table being in a <code>deactivated</code> state.</li>
+<li>Solution:
+<ul>
+<li>1: Modify the values in the <code>productOutlet</code> table to ensure the item functions normally.</li>
+<li>2: Entails deleting this check logic, as it's part of the migration to a service location.</li>
+<li>3: Allowing Managers to control product status on the POS.</li>
+</ul>
+</li>
+</ul>
+<h3>[QH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-2865">DELIANY-2865</a> Display incorrect recipient information in Delivery Order Edit Page (new ver.)</h3>
+<ul>
+<li>Issue: The issue stems from the recipient value being overwritten after retrieving the results from the contact information request.</li>
+<li>Solution: Do not overwrite if a previous value exists. If related information is changed, clear the value for consistent retrieval and writing.</li>
+</ul>
+<br />
+<br />
+<br />
 <h3>[VuNH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2641">DELIANY-2641</a> [Bug][BackOffice] Warehouse Location Types Incorrectly Displayed in Delivery/Pick-up Filter</h3>
   <img width="600" alt="image" src="https://github.com/user-attachments/assets/303629fa-5ce7-4865-aba7-8c67256c0ce5" />
 <h3>[VuNH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2824">DELIANY-2824</a> [Bug][BackOffice] The system does not automatically turn off expired campaigns</h3>
