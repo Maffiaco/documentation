@@ -68,6 +68,41 @@
   <body>
     <div class="content">
       <h2>Sprint DEL-139</h2>
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2823">DELIANY-2823</a> Add procurement order audit log</h3>
+<ul>
+<li>[x] Add <code>Audit Log Tab</code> in Procurement Order Details</li>
+<li>[x] Add <code>Audit Log Details</code> modal for single changes</li>
+</ul>
+<img width="800" src="https://github.com/user-attachments/assets/e8639356-481d-4ba4-9a8b-5afda53bd299" />
+<img width="800" src="https://github.com/user-attachments/assets/91bf2c58-1ad0-4c43-870f-a01deb21af03" />
+<h3>[Nam] 🚀 Fix cannot remove avatars</h3>
+<ul>
+<li>[x] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2823">DELIANY-2823</a> Cannot remove product avatar</li>
+<li>[x] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2608">DELIANY-2608</a> Cannot remove company avatar</li>
+</ul>
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2747">DELIANY-2747</a> Fix wrong cart total display</h3>
+<p>Cart total displays 'NaN đ' for first-time users adding initial product on mobile view</p>
+<img width="400" src="https://github.com/user-attachments/assets/62946a2a-d9d5-4aab-9185-dc4e1d621fa7" />
+<h3>[Nam] 🚀 Slightly improved searching with full-text search</h3>
+<p>Enable accent-insensitive search across content — users can now search without needing to type accents on characters, making search more natural and user-friendly.</p>
+<ul>
+<li>Enabled PostgreSQL’s <code>unaccent</code> extension to strip diacritics at query time.</li>
+<li>Search now matches results regardless of Vietnamese accents (e.g., searching <code>ca phe</code> will match both <code>cà phê</code> and <code>ca phe sua da</code>).</li>
+</ul>
+<h4>Implementation Strategy</h4>
+<p>Instead of always imposing unaccented matches, we can favor exact accent-sensitive matches when they are available and gently fall back to unaccented matches if none are discovered.</p>
+<p><strong>1. Mechanisms for scoring and ranking</strong></p>
+<p>Assign a score to each potential matched token:</p>
+<ul>
+<li><code>1.0</code> → Exact match (accent-sensitive)</li>
+<li><code>0.5</code> → Unaccented match only</li>
+</ul>
+<p><strong>2. Use full-text search with rankings</strong></p>
+<ul>
+<li>~Create <code>tsvector</code> columns with both original and unaccented content~</li>
+<li>Use <code>ts_rank_cd()</code> to compute relevance</li>
+<li>Prefer accurate phrase matches (with accent) in <strong>lexeme</strong> weighting</li>
+</ul>
 
     </div>
   </body>
