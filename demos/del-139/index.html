@@ -153,6 +153,55 @@
 <li>Use <code>ts_rank_cd()</code> to compute relevance</li>
 <li>Prefer accurate phrase matches (with accent) in <strong>lexeme</strong> weighting</li>
 </ul>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/132-125?issue=DELIANY-2820">DELIANY-2820</a> Change sound notification for Chickita</h3>
+<p>Issue:</p>
+<ul>
+<li>
+<p>New order alerts on Chickita POS are easy to miss due to a single, short sound. No voice or repeat alert is present.
+Solution:</p>
+</li>
+<li>
+<p>Add a voice alert: play the message “Bạn có đơn hàng mới” using a human voice when a new order is received.</p>
+</li>
+<li>
+<p>Reskin the POS footer to modernize the interface and create a clearer notification area.
+<img width="1914" height="1065" alt="image" src="https://github.com/user-attachments/assets/66de2e1f-743f-4933-ae4f-750df2603b13" /></p>
+</li>
+</ul>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/132-125?issue=DELIANY-2821">DELIANY-2821</a> [POS] Auto show new orders without refreshing the browser</h3>
+<p>Issue:</p>
+<ul>
+<li>POS users must manually refresh the browser to see new orders, even though a sound notification is triggered.
+Solution:</li>
+<li>When the user is on the /order page, automatically trigger a table refresh to fetch and display the latest data as soon as a new order is received. Also apply this logic for new reservations if applicable.</li>
+</ul>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/132-125?issue=DELIANY-2816">DELIANY-2816</a> [Improvement][POS] Display receive stock status by supplier order in PO detail page</h3>
+<p>Issue:</p>
+<ul>
+<li>
+<p>The PO detail page does not clearly indicate which suppliers have already received stock.</p>
+</li>
+<li>
+<p>All suppliers are displayed with similar UI, which may cause users to mistakenly attempt to update received quantities for completed suppliers.</p>
+</li>
+</ul>
+<p>Solution:</p>
+<ul>
+<li>
+<p>Enhance the PO detail page to:</p>
+</li>
+<li>
+<p>Clearly display stock receipt status per supplier.</p>
+</li>
+<li>
+<p>Visually differentiate suppliers who have already received stock from those who haven’t.</p>
+</li>
+<li>
+<p>Disable or hide the &quot;Receive Stock&quot; action for completed suppliers to prevent input errors.</p>
+</li>
+</ul>
+<img width="476" height="879" alt="image" src="https://github.com/user-attachments/assets/99bd307c-35ec-4de7-a7ce-d7e241c735e7" />
+<img width="437" height="985" alt="image" src="https://github.com/user-attachments/assets/fcbfc110-1e96-401d-bdce-7dacf82eae43" />
 
     </div>
   </body>
