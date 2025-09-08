@@ -68,8 +68,45 @@
   <body>
     <div class="content">
       <h2>Sprint DEL-142</h2>
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2926">DELIANY-2926</a> [Chickita web order] Move Track Order from bottom nav to top nav</h3>
+<img width="600" height="884" alt="image" src="https://github.com/user-attachments/assets/8924671d-9f0b-4672-bfc4-621e9cb4b344" />
+<img width="600" height="881" alt="image" src="https://github.com/user-attachments/assets/1b8f16de-4994-4188-b7f7-28832a034c8f" />
+<h3>[QH] 🚀 Do not display empty categories</h3>
+<ul>
+<li>Issue:
+<ul>
+<li>We created a mapping of productId to hidden to check the display of products.</li>
+<li>Then, we render all products within the outlet categories.</li>
+<li>We check if all products within a category are hidden, and if so, we hide the entire category.</li>
+<li>This leads to a situation where the initial category, which contained products not in the outlet, was not checked.</li>
+<li>As a result, the category remains visible, even though it's empty after being filtered by the mapping array.</li>
+</ul>
+</li>
+<li>Solution: Add a filter to only render products that are in the productOutlet mapping and check for hidden status.</li>
+</ul>
+<img width="600" height="927" alt="image" src="https://github.com/user-attachments/assets/8779a33d-edf7-48d4-a2fb-b4f9ac051a60" />
+<h3>[QH] 🚀 Default sales channel when creating Order in POS</h3>
+<img width="600" height="579" alt="image" src="https://github.com/user-attachments/assets/2013b87f-8e0e-4c6b-96ec-e2f779adbf88" />
+<h3>[QH] 🚀 Show addition quantities per product on POS</h3>
+<img width="600" height="786" alt="image" src="https://github.com/user-attachments/assets/eba3be79-33a5-4c63-a4f2-749e4907ab6f" />
+<h3>[QH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-2616">DELIANY-2616</a> [Bug][POS] System prints drawer order page instead of customer bill when user clicks print on iPad using Chrome</h3>
+<ul>
+<li>Issue: Chromium on the Chrome browser for iOS/iPadOS operating systems, when using the print element, only triggers the window print.</li>
+<li>Solution: When Chrome on iOS is detected, open a window to display the bill and print from that window.</li>
+</ul>
+<h3>[QH][POS] Order listing improvements</h3>
+<ul>
+<li>Migrate to <code>Ant Design</code>.</li>
+<li>Change <code>Select</code> to <code>DatePicker</code>.</li>
+<li>Optimize data requests and re-rendering.</li>
+<li>Add necessary new information to the <code>Table</code> according to the new design.</li>
+</ul>
+<img width="600" height="764" alt="image" src="https://github.com/user-attachments/assets/328dc360-9a5e-47f7-96e0-78249e6c53e8" />
+<br />
+<br />
+<br />
 <h3>[VuNH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-2931">DELIANY-2931</a> Workshift report - phase 2</h3>
-  <img width="600" height="750" alt="image" src="https://github.com/user-attachments/assets/d1b06e93-3575-4186-8500-3bad26932536" />  
+<img width="600" height="750" alt="image" src="https://github.com/user-attachments/assets/d1b06e93-3575-4186-8500-3bad26932536" />  
 <h3>[VuNH] Automatically send invoices according to flow settings</h3>
 <br />
 <br />
