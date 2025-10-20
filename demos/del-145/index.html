@@ -126,6 +126,27 @@
 </ul>
 <h3>[VuNH] Testing Invoice issued VNPT</h3>
 <h3>[VuNH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3013">DELIANY-3013</a> Sync data to DFS for PowerBI</h3>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3022">DELIANY-3022</a> [Improvement][POS] Show &quot;No cutlery&quot; tag in order detail view</h3>
+<ul>
+<li>Cause: Users don’t know which orders include dining utensils.</li>
+<li>Solution: Add a “cutlery” and &quot;no cutlery&quot; tag to orders that include them.</li>
+</ul>
+<img width="1063" height="1081" alt="image" src="https://github.com/user-attachments/assets/ba7ebba1-62da-4ee6-9538-5e09315393ec" />
+<img width="1074" height="1084" alt="image" src="https://github.com/user-attachments/assets/9225ecfe-997f-4747-887b-3cf700dfd9c0" />
+<h3>[TP] 🚀 Improve import product</h3>
+<ul>
+<li><a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-2725">DELIANY-2725</a> Cannot update imported products because of slug validation</li>
+<li><a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3005">DELIANY-3005</a> [Bug] Imported Prices parsed incorrectly due to decimal/thousands separators (comma “,” vs dot “.”)</li>
+<li><a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-2754">DELIANY-2754</a> [Bug] Cannot edit Categories that missing categoryProducts.ordering</li>
+<li><a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-2668">DELIANY-2668</a> [Bug] Broken product_outlets imported</li>
+<li>Cause: The issue occurred because outlet_id was not added to product_outlet, and no default value was set for productCategory.</li>
+<li>Solution: Set the default value of categoryProducts.ordering to 1, then verify and assign the corresponding outlet_id.</li>
+</ul>
+<h3>[TP] [POS]Click on the order notification to display the recoil</h3>
+<ul>
+<li>Cause: When placing a pre-order, users don’t know which date the order is scheduled for.</li>
+<li>Solution: When the user clicks on the notification, navigate them directly to the corresponding record (recoil).</li>
+</ul>
 
     </div>
   </body>
