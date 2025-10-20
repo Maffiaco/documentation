@@ -147,6 +147,58 @@
 <li>Cause: When placing a pre-order, users don’t know which date the order is scheduled for.</li>
 <li>Solution: When the user clicks on the notification, navigate them directly to the corresponding record (recoil).</li>
 </ul>
+<h3>[Nam] 🚀 Update Sales Reports as required by business</h3>
+<details>
+  <summary><strong>Fixed bugs 🐛</strong></summary>
+  <ul>
+    <li>Fix "Net Total" + "VAT Tax" != "Final Total"</li>
+    <li>Fix duplicated "UNIQUEID" value</li>
+  </ul>
+</details>
+<details>
+  <summary><strong>Add more rows and columns 📊</strong></summary>
+  <ul>
+    <li>Add total row to every sheets</li>
+    <li>Add "VAT Tax" and "VAT Amount" column to "Transaction Detail" sheet</li>
+    <li>Add "Refund" sheet as cancelled orders and voided product orders</li>
+    <li>Show delivery fee as detail rows</li>
+  </ul>
+</details>
+<details>
+  <summary><strong>Update behind logics 🧐</strong></summary>
+  <ul>
+    <li>Get payment method from order payment</li>
+    <li>Get product order price base on sales channel</li>
+    <li>Calculate coupon vat amount</li>
+    <li>Add delivery fee into net amount</li>
+  </ul>
+</details>
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2991">DELIANY-2991</a> Fix order search bar responsive issue</h3>
+<p>Search and filter section doesn't appear to be properly optimized for small screen</p>
+<p><em>Before</em></p>
+<img width="700" src="https://github.com/user-attachments/assets/74a96e91-909b-43c1-93aa-a956eebee380" />
+<p><em>After</em></p>
+<img width="700" src="https://github.com/user-attachments/assets/963835f3-4e6d-408c-8e58-27e38c58c776" />
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3019">DELIANY-3019</a> Address field cleared on submit causing Order Creation failure</h3>
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3023">DELIANY-3023</a> Users cannot view booking details with recorded Payoo payment</h3>
+<h3>[Nam] <a href="https://deliany.youtrack.cloud/issue/DELIANY-2849">DELIANY-2849</a> Enhance user flow after order editing</h3>
+<ul>
+<li>After changes saved, user will be redirected back to the order detail page of the edited order</li>
+</ul>
+<h3>[Nam] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3021">DELIANY-3021</a> Multi-language for Product 🌐</h3>
+<ul>
+<li>Implemented visual language indicators for multilingual product fields to improve user experience when managing products in different languages,
+helping users identify which language version they are currently editing using country flag emojis (🇺🇸 for English, 🇻🇳 for Vietnamese) with explanatory tooltip text</li>
+<li>Implement multi-language support for products to enable localized product information</li>
+<li>Update product search and fetching to work with locale-specific content</li>
+<li>Maintain backward compatibility with existing product data</li>
+</ul>
+<h3>[Nam] <a href="https://deliany.youtrack.cloud/issue/DELIANY-2977">DELIANY-2977</a> [BackOffice] Integrated Payoo in adding deposit for Bookings 💳</h3>
+<ul>
+<li>Use <code>insertedAt</code> instead of <code>completedAt</code></li>
+<li>Split <code>Action</code> column into <code>Status</code> and <code>Action</code> columns</li>
+<li>Show payment description below payment name to easily distinguish between payment types with the same name</li>
+</ul>
 
     </div>
   </body>
