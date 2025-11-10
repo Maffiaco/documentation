@@ -105,6 +105,66 @@
 <ul>
 <li><em>Case 1</em>: Number of additions = Number quantity of items</li>
 </ul>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3057">DELIANY-3057</a> [Bug][BackOffice] Image removed after updating location</h3>
+<ul>
+<li>Issue: When editing a location, the image (logo) is removed after saving.
+The cause is that the Recoil state is not reset after leaving the edit/create page, leading to phantom data from the previous record overwriting the image field.</li>
+<li>Solution : Reset the Recoil state when leaving or unmounting the edit/create location page.
+Ensure that if the user doesn’t change the image, the existing image remains preserved.</li>
+</ul>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3064">DELIANY-3064</a> [Bug][POS] User can view items of other booking after clicking to view booking detail</h3>
+<ul>
+<li>Issue : This happens because useOrderDetailsLazyQuery is used — when there’s no booking ID, it doesn’t fetch new data and instead retains (caches) the previous booking’s details.</li>
+<li>Solution : Replace useOrderDetailsLazyQuery with useQuery.
+useQuery returns null when there’s no booking ID, ensuring that old cached data is cleared and preventing users from seeing data from a previous booking.</li>
+</ul>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3073">DELIANY-3073</a> [POS] Not require recipient phone number when create new pickup order in POS</h3>
+<ul>
+<li>Solution : If the method is “Dine-in” or “Pickup”, the phone number field should not be required.</li>
+</ul>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3070">DELIANY-3070</a> [POS] Allow user to search by transact ID of order</h3>
+<ul>
+<li>Solution : Add a new column transact_type (string) to the search_document table.
+Update the backend to include a search query using ILIKE on the transaction ID field</li>
+</ul>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3068">DELIANY-3068</a> [Chester's Web Order improvement] Fix image scale issue on outlet page to ensure proper display</h3>
+<ul>
+<li>Issue : On the Chester’s Web Order outlet page, images are displayed with incorrect proportions due to improper scaling.</li>
+<li>Solution : Adjust the frontend to use properly scaled images that maintain the original aspect ratio when displayed, ensuring the image fits correctly within its frame.</li>
+</ul>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3047">DELIANY-3047</a> [POS] Update dine-in order print receipt</h3>
+<p>-Solution  : Use the same receipt template for both dine-in and pickup orders to ensure a unified and consistent printing format.</p>
+<h3>[TP] 🚀  <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3058">DELIANY-3058</a> [POS] Allow quick input Recipient Name when create new order</h3>
+<ul>
+<li>Issue : In the POS system, entering the recipient name when creating a new order takes extra time, especially for walk-in customers.</li>
+<li>Solution : Add a “Walk-in Customer” option that cashiers can quickly select as the recipient name.
+This allows faster order creation without requiring manual input for walk-in customers.</li>
+</ul>
+<h3>[TP] 🚀 Display transact</h3>
+<h4><a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3048">DELIANY-3048</a> [POS] Display transact number on Print bill on POS for Chester's</h4>
+<h4><a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3044">DELIANY-3044</a> [POS] Display transact number on POS for Chester's</h4>
+<ul>
+<li>Issue: In the POS system for Chester’s, the printed bill currently does not display the transaction number, making it harder for staff to manage and track bills efficiently.</li>
+<li>Solution: Add a configuration option in app_service_location to enable or disable showing the transaction number on the bill.
+Update the bill template,record to display the transaction number when the configuration is enabled.</li>
+</ul>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3059">DELIANY-3059</a> [Improvement][POS] Allow add new/ edit Notes of Order</h3>
+<ul>
+<li>Issue: In the POS system, users currently cannot add or edit notes and tags for an existing order.</li>
+<li>Solution : Add an Edit button next to the order information section, allowing users to add or modify notes and tags directly within the order details.</li>
+</ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3072">POS</a> Update Chester's print receipt</h3>
+<ul>
+<li>Issue : In the POS system for Chester’s, the print receipt needs to be updated to reflect the latest requirements.</li>
+<li>Solution :Modify the footer according to the new content.
+Replace the “Invoice” label with “Recipient” to match the new format.</li>
+</ul>
+<h3>[TP] <a href="">DELIANY-3071</a> [POS] Apply lead time when user creates new order in POS</h3>
+<ul>
+<li>Issue : In the POS system, when creating a new order, the lead time is currently set to a fixed value for all orders.</li>
+<li>Solution : Calculate lead time according to the distance between the store and delivery address.
+Adjust lead time based on the order type (e.g., delivery, pickup, dine-in).</li>
+</ul>
 
     </div>
   </body>
