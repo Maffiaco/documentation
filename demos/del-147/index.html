@@ -104,6 +104,47 @@ brands</li>
 <h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3084">DELIANY-3084</a> Display product discount campaign information in Sales Report</h3>
 <img width="1895" height="464" alt="image" src="https://github.com/user-attachments/assets/68fec40c-d170-43c5-8951-8b048a85ec7b" />
 <h3>[TP]  <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3050">DELIANY-3050</a> [Bug][POS] Failed Validate form of change amount with cash payment</h3>
+<hr>
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-2895">DELIANY-2895</a> Configure inventory purchase unit, base unit, and conversion rate</h3>
+<ul>
+<li>Implemented unit configuration feature for inventory management allowing separate base units (for recipes/costing) and purchase units (for procurement)</li>
+<li>Added Unit Configuration section with base unit selector, purchase unit selector, and conversion rate input with validation</li>
+<li>Need confirmation when change units after created invetory</li>
+</ul>
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3075">DELIANY-3075</a> Improve procurement order date time filter</h3>
+<ul>
+<li>Change the filter label from <code>Timeline</code> → <code>Create date</code></li>
+<li>Add new filter option – <code>All Time</code></li>
+<li>Set default filter value to <code>All Time</code></li>
+</ul>
+<img width="700" src="https://github.com/user-attachments/assets/a0a557ac-9ae8-435d-98af-6354f84f7435" />
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3069">DELIANY-3069</a> Hide voided products on order details</h3>
+<ul>
+<li>Voided products are displayed on tracking page</li>
+<li>Filter out voided products on order details</li>
+</ul>
+<img width="700" src="https://github.com/user-attachments/assets/e5d9b90f-78ba-4724-8192-8195b4355c86" />
+<img width="700" src="https://github.com/user-attachments/assets/fd50d8ed-f604-4086-a6cc-fea739336eb0" />
+<h3>[Nam] 🚀 Move NAS export path to FAST Account Settings</h3>
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3093">DELIANY-3093</a> Update voided products display styles in order details</h3>
+<p><strong>Before</strong></p>
+<img width="500" src="https://github.com/user-attachments/assets/9ed5e2f0-e166-456b-abb6-9de9c3313012" />
+<img width="500" src="https://github.com/user-attachments/assets/b26aabfc-3a93-44e0-a53d-706d4dedc527" />
+<p><strong>After</strong></p>
+<img width="500" src="https://github.com/user-attachments/assets/dc863a50-8e51-46d0-84ec-82e5c721414a" />
+<img width="500" src="https://github.com/user-attachments/assets/ddbf8a2a-4a0a-4fd7-a402-5434990784d8" />
+<h3>Nam 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3098">DELIANY-3098</a> Fix number of addition groups is counted wrong</h3>
+<img width="2826" height="858" alt="image" src="https://github.com/user-attachments/assets/cb2e4642-16dd-4f87-bacf-e0561229b0f5" />
+<h3>Nam 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3103">DELIANY-3103</a> [FAST] Add delivery fee to transaction detail</h3>
+<ul>
+<li>Treat delivery fee as a data row in <code>Transaction Detail</code> sheet</li>
+<li>Update sync logic to properly identify and flag products with 100% discount as gift items</li>
+<li><code>Net Total</code> will use the discounted value from now on</li>
+<li>Map delivery fee ref code base on range</li>
+<li>Group and list all order payments by <code>report_group</code> instead only take the first one like before. Ignore group(s) that have zero in total</li>
+<li>Add <code>Delivery fee</code> to <code>Net total</code></li>
+<li>Sum <code>Final total</code> by using <code>SUBTOTAL</code> formula</li>
+</ul>
 
     </div>
   </body>
