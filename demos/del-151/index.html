@@ -119,6 +119,23 @@
 <li>Retrieval of invoice templates for configuration.</li>
 </ul>
 <img width="1680" height="850" alt="image" src="https://github.com/user-attachments/assets/16e1ac01-fc16-43ab-b14e-9a88ac117316" />
+<hr>
+<h3>[Nam] Exposed queries for transactions, refunds, and reconciliations</h3>
+<ul>
+<li>Added GraphQL queries and types for payment gateway transactions, refunds, and NAPAS reconciliations with filtering and pagination support</li>
+<li>Updated Norra payment <code>ref_code</code> to use <code>payment_ref</code> field with nil fallback for better error handling</li>
+</ul>
+<h3>[Nam] Added Payment Management feature to track and manage payment gateway transactions, refunds, and reconciliations</h3>
+<ul>
+<li>Added new menu section under Payment Management with three sub-modules: Transactions, Refunds, and Reconciliations</li>
+<li>Implemented Transactions view with filtering by payment method, status, date range, and search by payment ID/reference
+<img width="700" src="https://github.com/user-attachments/assets/8a4b5df5-df1f-4488-ba74-38229294d508" />
+<img width="700" src="https://github.com/user-attachments/assets/d5beb735-101a-42e3-968e-670a8a7e0657" /></li>
+<li>Implemented Refunds view with status tracking and filtering capabilities</li>
+<li>Implemented Reconciliations view with settlement tracking and detailed transaction breakdowns
+<img width="700" src="https://github.com/user-attachments/assets/f064cdd3-c5d7-42bf-bb92-0c81172a941a" />
+<img width="700" src="https://github.com/user-attachments/assets/8dc120ca-1178-49d1-90a1-0669a5a124ab" /></li>
+</ul>
 
     </div>
   </body>
