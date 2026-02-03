@@ -139,6 +139,19 @@
 <img width="681" height="764" alt="image" src="https://github.com/user-attachments/assets/b9ec924b-d80d-4305-b8cd-1b001ce9b132" />
 <h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3204/Update-contract-template-for-Wynnley">DELIANY-3204</a> Update contract template for Wynnley</h3>
 <img width="698" height="518" alt="image" src="https://github.com/user-attachments/assets/ce0a083e-80ad-4143-a324-cb4dc7c851f2" />
+<hr>
+<h3>[Nam] Refactored reconciliation data structure to separate root reconciliation metadata from individual reconciliation transactions</h3>
+<ul>
+<li>Restructured reconciliation data model to introduce root reconciliation concept with nested transaction details</li>
+<li>Replaced reconciliation detail list view with modal-based detail view using structured description items</li>
+</ul>
+<img width="700" src="https://github.com/user-attachments/assets/965fdd00-0a0d-487e-84f9-e16aefeac94c" />
+<img width="700" src="https://github.com/user-attachments/assets/90b85c71-6721-442c-8597-bdfcc6435250" />
+<h3>[Nam] Restructured payment gateway reconciliation to introduce a root reconciliation concept with separate detail queries</h3>
+<ul>
+<li>Updated GraphQL resolvers to use the new details module for querying and pagination</li>
+<li>Changed default ordering from settlement date to descending by <code>issued_at</code></li>
+</ul>
 
     </div>
   </body>
