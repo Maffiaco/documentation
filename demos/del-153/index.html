@@ -84,6 +84,30 @@
 <ul>
 <li>Backfill addition_ids</li>
 </ul>
+<h3>[Nam] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3219">DELIANY-3219</a> Update external transaction id after create payment</h3>
+<ul>
+<li>Use <code>trans_id</code> from <code>payment_norra_payments</code> as external transaction id</li>
+<li>Transaction IDs that exceed the container width will now be truncated with ellipsis while maintaining the copyable functionality</li>
+</ul>
+<img width="700" src="https://github.com/user-attachments/assets/e5dc9b29-42fe-4b5f-a753-8a2cc30a7f2b" />
+<h3>[Nam] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3220">DELIANY-3220</a> Allow user retry NAPAS payment creation after timeout/deposit on confirm order flow</h3>
+<p>Allow retrying payment after it has expired or been cancelled.
+Previously, only expired payments could be retried; now cancelled payments are also supported.
+Deposit payments are filtered out from the current order payment lookup,
+and QR code status is polled on an interval to detect expiration in real time.</p>
+<ul>
+<li>Added <code>Cancelled</code> to able-to-retry payment statuses, and filtered out deposit payments.</li>
+<li>Replaced <code>useEffect</code> with <code>useInterval</code> (1s polling) to continuously check payment expiration/cancellation.</li>
+</ul>
+<img width="700" src="https://github.com/user-attachments/assets/19d38ecc-b639-4152-963e-c66b470949f1" />
+<h3>[Nam] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3235">DELIANY-3235</a> Improvement Refund UI/UX for Napas payment</h3>
+<p>Add search functionality for refund transactions in payment management</p>
+<ul>
+<li>Updated Transaction and Refund lists with enhanced filtering and search features</li>
+<li>Extended GraphQL schema for payment management fragments with additional fields</li>
+</ul>
+<img width="700" src="https://github.com/user-attachments/assets/d832dae4-0b45-4640-b058-afac25a9249e" />
+<img width="700" src="https://github.com/user-attachments/assets/363c2f40-992e-4b22-8fae-a3f111c1e3bd" />
 
     </div>
   </body>
