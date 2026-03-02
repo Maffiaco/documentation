@@ -84,7 +84,24 @@
 <ul>
 <li>Backfill addition_ids</li>
 </ul>
-<h3>[Nam] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3219">DELIANY-3219</a> Update external transaction id after create payment</h3>
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3214">DELIANY-3214</a> Update logo of NAPAS payment in Confirm order flow &amp; Receive Payment</h3>
+<img width="700" src="https://github.com/user-attachments/assets/8b87ce7b-a5c5-4fa3-9ec8-5daf7b9c188e" />
+<img width="700" src="https://github.com/user-attachments/assets/83c3e44c-2f48-4ecf-8b6e-0cd9f01b380d" />
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3215">DELIANY-3215</a> Redirect after payment with NAPAS</h3>
+<p>After payment successfull/unsuccessfull/cancel, depend on payment entity:</p>
+<ul>
+<li>[x] Payment for Order, redirect to order checkout page</li>
+<li>[x] Payment for Booking, redirect to booking confirmation page</li>
+<li>[ ] Payment for Deals or otherwise, redirect to home page</li>
+</ul>
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3222">DELIANY-3222</a> Validate amount for Create NAPAS payment</h3>
+<ul>
+<li><strong>Issue</strong>: Payment amount validation issue affects Napas and other integrated payment methods.
+System needs proper validation to handle payment amount limits and constraints.</li>
+<li><strong>Solution</strong>: Use payment transaction limit configuration to set the minimum/maximum allowed value of a single payment</li>
+</ul>
+<img width="700" src="https://github.com/user-attachments/assets/d5aa7119-9677-4242-9a75-8001c96f0656" />
+<h3>[Nam] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3219">DELIANY-3219</a> Update external transaction id after create payment</h3>
 <ul>
 <li>Use <code>trans_id</code> from <code>payment_norra_payments</code> as external transaction id</li>
 <li>Transaction IDs that exceed the container width will now be truncated with ellipsis while maintaining the copyable functionality</li>
