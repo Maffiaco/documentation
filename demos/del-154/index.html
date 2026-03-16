@@ -86,19 +86,81 @@
 <li>
 <h2>Issue</h2>
 </li>
-<li>The existing <strong>bill module</strong> had a rigid structure.</li>
-<li>Billing-related types were scattered across the codebase.</li>
-<li>The system had limited support for configuring different document displays.</li>
-<li>Adding or updating document types (e.g., invoices, food checks) required changes in multiple places.</li>
-<li>This increased complexity and created technical debt.</li>
+<li>
+<p>The existing <strong>bill module</strong> had a rigid structure.</p>
+</li>
+<li>
+<p>Billing-related types were scattered across the codebase.</p>
+</li>
+<li>
+<p>Adding or updating document types (e.g., invoices, food checks) required changes in multiple places.</p>
+<ul>
+<li>
+<h2>Solution</h2>
+</li>
+</ul>
+</li>
+<li>
+<p>Refactored the bill module for better structure and maintainability.</p>
+</li>
+<li>
+<p>Introduced <strong>InvoiceV2</strong> and <strong>FoodCheckV2</strong> for improved document generation.</p>
+</li>
+<li>
+<p>Added <strong>InvoiceDisplayConfig</strong> to support flexible display configurations.</p>
+</li>
+<li>
+<p>Unified billing-related types into a shared <code>billType</code>.</p>
+</li>
+<li>
+<p>Switched document generation to a <strong>configuration-driven approach</strong> for easier extensibility.</p>
+</li>
+</ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3242">DELIANY-3242</a> [Bug][Backoffice] Wrong quantity additions in sales reports</h3>
+<ul>
+<li>
+<h2>Issue</h2>
+</li>
+<li>
+<p>In the <strong>backoffice sales reports</strong>, quantities of <strong>product order additions</strong> were not aggregated correctly.</p>
+</li>
+<li>
+<p>Additions belonging to the same <code>addition_id</code> and <code>price</code> could appear multiple times instead of being merged.</p>
+</li>
+<li>
+<p>This caused the reported quantities of additions in sales reports to be inaccurate.</p>
+</li>
+<li>
+<h2>Solution</h2>
+</li>
+<li>
+<p>Implemented the <code>merge_product_order_additions/1</code> function to properly aggregate product order additions.</p>
+</li>
+<li>
+<p>Grouped additions by <code>addition_id</code> and <code>price</code>.</p>
+</li>
+<li>
+<p>Calculated the total quantity using <code>Decimal.add/2</code> to ensure precision.</p>
+</li>
+<li>
+<p>This ensures that quantities of additions are correctly merged and accurately displayed in the sales reports.</p>
+</li>
+</ul>
+<h3>[TP] Feature: Save customer info after issue vat invoice</h3>
+<h2>Issue</h2>
+<ul>
+<li>Customer information was not saved on the order after issuing a <strong>VAT invoice</strong>.</li>
 </ul>
 <h2>Solution</h2>
 <ul>
-<li>Refactored the bill module for better structure and maintainability.</li>
-<li>Introduced <strong>InvoiceV2</strong> and <strong>FoodCheckV2</strong> for improved document generation.</li>
-<li>Added <strong>InvoiceDisplayConfig</strong> to support flexible display configurations.</li>
-<li>Unified billing-related types into a shared <code>billType</code>.</li>
-<li>Switched document generation to a <strong>configuration-driven approach</strong> for easier extensibility.</li>
+<li>Extract customer info from the invoicing profile or request input.</li>
+<li>Persist it to the order after the VAT invoice is successfully issued using a safe side-effect.</li>
+</ul>
+<h3>[TP] feat: Add external invoice ID display to order and booking lists</h3>
+<h2>Issue</h2>
+<ul>
+<li>External invoice IDs were not visible in the <strong>Orders</strong> and <strong>Bookings</strong> list views.</li>
+<li>This made it difficult for users to quickly reference or copy the external invoice identifier.</li>
 </ul>
 
     </div>
