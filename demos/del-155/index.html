@@ -77,6 +77,43 @@
 <ul>
 <li>BE create combo product</li>
 </ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3245">DELIANY-3251</a> Add refcode column in Product Import Template</h3>
+<p><strong>Issue</strong></p>
+<p>Product Import Template does not have <code>ref_code</code>, so users cannot import product reference codes.</p>
+<p><strong>Solution</strong></p>
+<ul>
+<li>Add <code>ref_code</code> column to template</li>
+<li>Support import &amp; mapping to product data</li>
+<li>Optional field, allow empty</li>
+<li>Auto trim spaces</li>
+<li>Validate format, return error if invalid</li>
+<li>Show <code>ref_code</code> in validation screen &amp; error file</li>
+<li>Save and display in product details after import</li>
+</ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3253">DELIANY-3253</a> [BackOffice] Improve the display of actual issued VAT invoice information in the order/booking detail</h3>
+<p><strong>Issue</strong></p>
+<p>Actual issued VAT invoice information is not clearly displayed in order/booking detail.</p>
+<p><strong>Solution</strong></p>
+<ul>
+<li>Improve UI to show actual issued VAT invoice info clearly</li>
+<li>Ensure correct data mapping from invoice to order/booking</li>
+<li>Display key fields consistently in detail view</li>
+</ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3244">DELIANY-3244</a> [BackOffice] Allow Export Person Contacts as excel file</h3>
+<p><strong>Issue</strong></p>
+<p>Users cannot export CRM Persons data for external use.</p>
+<p><strong>Solution</strong></p>
+<ul>
+<li>Add <code>Export Excel</code> button on CRM Persons page</li>
+<li>Export data based on current filters</li>
+<li>File format: <code>.xlsx</code>, auto download with timestamp name</li>
+<li>Include key fields: name, phone, email, address, source, owner, gender, DOB, age range, type</li>
+<li>Keep empty values blank</li>
+<li>Apply permission control for export action</li>
+<li>Show loading state, prevent duplicate exports</li>
+<li>If no data, show message instead of exporting file</li>
+<li>Ensure only authorized data is exported</li>
+</ul>
 
     </div>
   </body>
