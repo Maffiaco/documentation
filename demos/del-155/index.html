@@ -117,6 +117,25 @@
 <li>Ensure only authorized data is exported</li>
 </ul>
 <img width="1667" height="815" alt="image" src="https://github.com/user-attachments/assets/7f31fa80-5973-45e3-9c69-cc1233dc5317" />
+<h3>[Nam] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3252">DELIANY-3252</a> Allow add sale channel price(s) with Schedule Update Price</h3>
+<p>Previously, a scheduled price change applied a single price uniformly.
+This change extends price schedules to support per-sales-channel pricing —
+so a product can be scheduled to have different prices on different sales channels at a future point in time.</p>
+<ul>
+<li>Price schedules now accept a list of channel-specific prices. When creating a schedule,
+user can provide a price per sales channel instead of (or in addition to) a single global price.</li>
+<li>A &quot;Keep price&quot; toggle allows users to leave the global or per-channel price unchanged rather than requiring a new value</li>
+<li>When a scheduled price job runs, it merges the new channel prices with the product's existing prices,
+updating only the channels specified in the schedule and leaving others untouched.</li>
+</ul>
+<img width="700" src="https://github.com/user-attachments/assets/911ad7a1-9ea2-46c0-a0e0-d8aca53de494" />
+<h3>[Nam] Contacts created from POS Orders is missing Sales Channel info</h3>
+<p>Fixed a bug where contacts created from POS orders were not being associated with the correct sales channel</p>
+<ul>
+<li>When a contact is created during a POS order, the sales channel is now correctly saved to the contact record</li>
+<li>The contact creation step now runs unconditionally during order placement,
+rather than being skipped when no contact details were explicitly provided in the input — ensuring contacts are created in all cases as intended</li>
+</ul>
 
     </div>
   </body>
