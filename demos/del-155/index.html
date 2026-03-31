@@ -157,7 +157,16 @@ updating only the channels specified in the schedule and leaving others untouche
 <ul>
 <li>When a contact is created during a POS order, the sales channel is now correctly saved to the contact record</li>
 <li>The contact creation step now runs unconditionally during order placement,
-rather than being skipped when no contact details were explicitly provided in the input — ensuring contacts are created in all cases as intended</li>
+rather than being skipped when no contact details were explicitly provided in the input
+— ensuring contacts are created in all cases as intended</li>
+</ul>
+<h3>[Nam] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3256">DELIANY-3256</a> Sales channel prices lost after base price update</h3>
+<p>Fixed a bug where product prices for individual sales channels were being lost
+when editing the base price on the product creation/editing form.</p>
+<ul>
+<li>When the base price field is cleared, all associated sales channel prices are now also cleared correctly</li>
+<li>When a valid base price is entered, the per-sales-channel prices are properly reset so they can be recalculated
+— previously they could be silently dropped due to the handler firing too late (on blur instead of on change)</li>
 </ul>
 
     </div>
