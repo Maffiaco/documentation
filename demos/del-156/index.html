@@ -85,20 +85,11 @@ Currently, the system does not have a clear permission control for the Export Ex
 BackOffice users cannot export CRM Persons data to Excel, making it difficult to review, share, and analyze customer information outside the system.</p>
 <p><strong>Solution</strong></p>
 <ul>
-<li>
-<p>Add <strong>Export Excel</strong> button on CRM Persons page</p>
-</li>
-<li>
-<p>Export data based on current filters/search conditions</p>
-</li>
-<li>
-<p>Generate <code>.xlsx</code> file with naming format: <code>crm_persons_data_YYYYMMDD_HHMMSS.xlsx</code></p>
-</li>
-<li>
-<p>Include required fields: name, phone, email, address, source, owner, etc.</p>
-</li>
-<li>
-<p>Ensure:</p>
+<li>Add <strong>Export Excel</strong> button on CRM Persons page</li>
+<li>Export data based on current filters/search conditions</li>
+<li>Generate <code>.xlsx</code> file with naming format: <code>crm_persons_data_YYYYMMDD_HHMMSS.xlsx</code></li>
+<li>Include required fields: name, phone, email, address, source, owner, etc.</li>
+<li>Ensure:
 <ul>
 <li>Empty values remain blank</li>
 <li>Data matches system at export time</li>
@@ -107,9 +98,9 @@ BackOffice users cannot export CRM Persons data to Excel, making it difficult to
 <li>Show message if no data available</li>
 <li>Only export data user is authorized to access</li>
 </ul>
-<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-2320">DELIANY-2320</a> [BackOffice] Freemium onboarding set-up: Welcome screen</h3>
 </li>
 </ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-2320">DELIANY-2320</a> [BackOffice] Freemium onboarding set-up: Welcome screen</h3>
 <p><strong>Issue</strong><br>
 Freemium users do not have a clear onboarding entry point after sign-up, leading to confusion about account creation status and next steps.</p>
 <p><strong>Solution</strong></p>
@@ -148,52 +139,6 @@ There is no step for users to define brand identity during onboarding, which is 
 <li>Save data (name, description, logo) after successful submission</li>
 <li>Restore saved data when user returns to this step</li>
 <li>Only allow progress when required fields are valid</li>
-</ul>
-<hr>
-<h3>[TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-2311/Freemium-Sign-up-Sign-up-form">DELIANY-2311</a> [BackOffice] Freemium Sign-up: Sign-up form</h3>
-<p><strong>Issue</strong><br>
-Users need a simple entry point to register for the freemium version, but current flow lacks a structured and validated sign-up process.</p>
-<p><strong>Solution</strong></p>
-<ul>
-<li>Provide sign-up form accessible via freemium link</li>
-<li>Step 1: Input email
-<ul>
-<li>Validate email format</li>
-<li>Check existing account → redirect to verify email if exists</li>
-</ul>
-</li>
-<li>Step 2: Input business information:
-<ul>
-<li>Fullname</li>
-<li>Password</li>
-<li>Business name</li>
-<li>Phone number</li>
-<li>Address</li>
-</ul>
-</li>
-<li>Email field is read-only in step 2</li>
-<li>Submit form → send verification email</li>
-<li>Ensure validation rules are applied before submission</li>
-<li>Guide user through clear step-by-step registration flow</li>
-</ul>
-<hr>
-<h3>[TP] [MVP] [BackOffice] Freemium Reservations MVP</h3>
-<p><strong>Issue</strong><br>
-Freemium onboarding and sign-up flow are fragmented, making it difficult to deliver a consistent MVP experience for Reservations.</p>
-<p><strong>Solution</strong></p>
-<ul>
-<li>Combine core flows into MVP:
-<ul>
-<li>Sign-up (DELIANY-2311)</li>
-<li>Welcome onboarding (DELIANY-2320)</li>
-<li>Brand setup (DELIANY-2321)</li>
-</ul>
-</li>
-<li>Ensure seamless flow:
-Sign-up → Welcome → Brand → Next steps</li>
-<li>Align UI/UX with Figma design</li>
-<li>Ensure data consistency across onboarding steps</li>
-<li>Deliver a minimal but complete onboarding experience for freemium users</li>
 </ul>
 
     </div>
