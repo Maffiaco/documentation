@@ -92,6 +92,15 @@
 <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/9c08df12-ccbc-4e44-b075-e1b835289196" />
 <h3>[VuNH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3271">DELIANY-3271</a> [BackOffice] Allow user to search NAPAS transaction &amp; map static transaction</h3>
 <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/f270d241-89db-42f3-a744-a9f5498467de" />
+<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/132-143?a=131-3%2Fcurrent&amp;issue=DELIANY-3279">DELIANY-3279</a> [POS]Hide product subtotal amount in Order Details screen &amp; Order Create/Edit screen</h3>
+<p><strong>Solution:</strong> Add <code>show_product_subtotal_on_pos</code> config to control product subtotal visibility on POS.</p>
+<p><strong>Resolve:</strong> Hide product line subtotal when config is false; keep calculations and totals unchanged.</p>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/132-143?a=131-3%2Fcurrent&amp;issue=DELIANY-3281">DELIANY-3281</a>  [BackOffice] Show correct Extra charge name for Tips on Booking / tab Receipt</h3>
+<p><strong>Issue:</strong> Tip label shown as &quot;Tips&quot; instead of correct name &quot;Phụ thu&quot;.</p>
+<p><strong>Solution:</strong> Use configured extra charge name to display correct tip label on receipt.</p>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/132-143?a=131-3%2Fcurrent&amp;issue=DELIANY-3273">DELIANY-3273</a>  [Backoffice] Missing read_per_user permission action for CRM contact</h3>
+<p><strong>Issue:</strong> Users with <code>read_per_user</code> permission can view all contacts instead of only owned ones, causing data access control breach.</p>
+<p><strong>Solution:</strong> Enforce ownership-based filtering in CRM queries, ensuring users only see contacts where they are the owner when <code>read_per_user</code> is applied.</p>
 
     </div>
   </body>
