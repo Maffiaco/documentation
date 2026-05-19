@@ -68,6 +68,23 @@
   <body>
     <div class="content">
       <h2>Sprint DEL-158</h2>
+<h3>[QH] Optimize queries when opening drawer reservation details.</h3>
+<ul>
+<li>Optimize queries when opening reservation details, reorganize state/value usage to prevent redundant refetching.</li>
+<li>Combine discrete queries into a single GraphQL multiple query.</li>
+</ul>
+<h3>[QH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3275">DELIANY-3275</a> [Improvement] Allow user to input custom Tip amount</h3>
+<ul>
+<li>Allow entering the desired number when focusing on the Tip amount input.</li>
+<li>Resolve iPad keyboard/input looping issue at Tip &amp; Rate step.</li>
+</ul>
+<h3>[QH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3282">DELIANY-3282</a> [Bug][POS] Product discount not recalculated when Order Channel is changed after adding product</h3>
+<ul>
+<li>Display a warning when the user selects a Sales Channel Category or Sales Channel at the final step.</li>
+<li>If the user chooses to change it, the system will recalculate the price based on the newly selected sales channel before submitting the order creation.</li>
+</ul>
+<img width="691" height="414" alt="image" src="https://github.com/user-attachments/assets/fce1ff25-7e2c-4ea3-ae96-264a689dc96b" />
+<hr>
 <h3>[VuNH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3271">DELIANY-3271</a> [BackOffice] Allow user to search NAPAS transaction &amp; map static transaction</h3>
 <img width="800" height="600" alt="CleanShot 2026-05-18 at 21 39 01@2x" src="https://github.com/user-attachments/assets/739de196-5f05-4330-840c-27fab58361c5" />
 <img width="800" height="600" alt="CleanShot 2026-05-18 at 21 39 28@2x" src="https://github.com/user-attachments/assets/bade3437-6a22-4381-9d84-49d01b988b8d" />
@@ -81,6 +98,7 @@
 <li>Send to kitchen</li>
 <li>Mqtt printer</li>
 </ul>
+<hr>
 
     </div>
   </body>
