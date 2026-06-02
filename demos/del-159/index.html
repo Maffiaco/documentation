@@ -68,11 +68,45 @@
   <body>
     <div class="content">
       <h2>Sprint DEL-159</h2>
+<h3>[QH] Enhance and upgrade combo processing for Back Office, POS, and KDS.</h3>
+<p>Back-Office:</p>
+<ul>
+<li>Fixed an issue where the selected product list was cleared when reopening and saving the modal without changes.</li>
+<li>Added SKU details under product names in the <code>Select Product</code> modal to prevent confusion between identical item names.</li>
+<li>Enabled search functionality for combo names and combo SKUs.</li>
+<li>Resolved an issue preventing order updates on the Edit Order page when a combo contains additions.</li>
+</ul>
+<p>POS:</p>
+<ul>
+<li>Applied the default prep station behavior to combo items when they are not pre-configured.</li>
+<li>Sorted combo items by their setup priority across Order Details, View Combo modal, Bill Printing, and KDS.</li>
+<li>Fixed an issue where combos couldn't be deleted while in the <code>New</code> state.</li>
+<li>Fixed the active/inactive configuration for combos so that only active combos are displayed on the POS listing.</li>
+<li>Fixed an issue where the <code>Save &amp; Send</code> button was incorrectly disabled on the Edit Order page.</li>
+</ul>
+<p>KDS:</p>
+<ul>
+<li>Fixed an issue where item checkboxes within a product were unclickable.</li>
+<li>Fixed a calculation bug where product quantities in printing were incorrectly inverted.</li>
+<li>Fixed an issue where a blank ticket was incorrectly sent to the Bar station when ordering combos routed entirely to the Kitchen.</li>
+</ul>
+<h3>[QH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3259">DELIANY-3259</a> Manage Reservations in Calendar Chart View</h3>
+<ul>
+<li>Implemented the Calendar Chart (Gantt View) for the <code>Manage Reservations</code> feature.</li>
+<li>Added mini-calendar navigation with real-time summary cards for total Bookings and Guests.</li>
+<li>Displayed upcoming or active walk-in/reservation lists under the mini-calendar.</li>
+<li>Structured the reservation timeline grid grouped by table areas (e.g., Unassigned, Khu b) and table names.</li>
+<li>Implemented dynamic hourly timeline tracking (from 09:00) across the grid.</li>
+<li>Enabled dynamic reservation blocks (e.g., WALK IN) mapped onto specific tables and time slots with status colors.</li>
+</ul>
+<img width="1726" height="874" alt="Screenshot 2026-06-02 at 07 33 48" src="https://github.com/user-attachments/assets/80f1d92b-ddd9-48e7-8d5a-10a06e4f44b3" />
+<hr>
 <h3>[VuNH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3289">DELIANY-3289</a> [Improvement] Extend payment process time on napas payment link upto 1week for type dynamic</h3>
 <h3>[VuNH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3286">DELIANY-3286</a> Shorten payment link of VietQRpay/napas</h3>
 <h3>[VuNH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3288">DELIANY-3288</a> [Printer] Send Fixed Product Combo to prep station's printer</h3>
 <h3>[VuNH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3232">DELIANY-3232</a> Display Product Combo on Invoice</h3>
 <img width="800" height="600" alt="CleanShot 2026-06-01 at 16 29 23@2x" src="https://github.com/user-attachments/assets/fac6fc47-dff2-4249-acc9-2cefd97f0bad" />
+<hr>
 <h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3287">DELIANY-3287</a> [NAPAS] Add NAPAS's partners logo on payment screen</h3>
 <img width="1260" height="728" alt="image" src="https://github.com/user-attachments/assets/5d1fb423-95a3-40a7-b24c-651e6c2a2839" />
 <img width="1666" height="826" alt="image" src="https://github.com/user-attachments/assets/960604ad-72d2-424d-b15d-6bbf93180594" />
