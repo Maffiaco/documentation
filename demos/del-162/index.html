@@ -68,6 +68,33 @@
   <body>
     <div class="content">
       <h2>Sprint DEL-162</h2>
+<hr>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3319">DELIANY-3319</a> [POS] Add overpayment warning for payment amount exceeding 10% of remaining payable amount</h3>
+<p>PR: https://github.com/Maffiaco/sicily/pull/3502</p>
+<p><strong>Issue:</strong> On POS, staff can enter or select a received amount much higher than the remaining payable amount without any confirmation, which risks incorrect overpayments.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Show a confirm modal when the received amount exceeds <strong>10%</strong> above the rounded amount due (<code>Math.ceil</code>)</li>
+<li>Apply on both suggested amount selection and payment form submit</li>
+<li><strong>Continue</strong> keeps the selected amount and sends a Sentry warning (Slack alert pipeline)</li>
+<li><strong>Cancel</strong> discards the overpayment action</li>
+<li>No warning when amount ≤ threshold or equals pay-full</li>
+</ul>
+<!-- screenshot -->
+<hr>
+<h3>[TP] 🚀 <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3320">DELIANY-3320</a> [BackOffice] Add tab &quot;Payments&quot; &amp; show payment log details for bookings</h3>
+<p>PR: https://github.com/Maffiaco/sicily/pull/3503</p>
+<p><strong>Issue:</strong> Booking details in Back Office had no dedicated Payments view, so users could not review payment status, history, deposits, or transaction details without leaving the flyout.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Add a <strong>Payments</strong> tab in booking details (Dine-in / Banquet)</li>
+<li>Show payment summary: total, paid, remaining, and status (Unpaid / Partially Paid / Paid)</li>
+<li>Show payment log table sorted by latest payment date/time</li>
+<li>Include deposit, full, payment-link, integrated, manual, cancelled, failed, and refunded records</li>
+<li>Calculate paid amount from successful payments only; deduct completed refunds</li>
+<li>Empty state: &quot;No payment records found.&quot;</li>
+</ul>
+<!-- screenshot -->
 
     </div>
   </body>
