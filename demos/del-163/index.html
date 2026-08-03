@@ -73,25 +73,50 @@
 <h3>[VuNH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3318">DELIANY-3318</a> Adjust to-paid amount on Wynnley receipt</h3>
 <h3>[VuNH] Multi tenant app</h3>
 <ul>
-<li>
-<p>Create schema storefront</p>
+<li>Create schema storefront</li>
+<li>Sidebar order page</li>
+<li>Responsive Mobile, Ipad brand detail</li>
+<li>Responsive Mobile, Ipad location detail</li>
+<li>Responsive Mobile, Ipad checkout cart</li>
+</ul>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3319">DELIANY-3319</a> [POS] Add overpayment warning for payment amount exceeding 10% of remaining payable amount</h3>
+<p><strong>Issue:</strong> On POS, staff can enter or select a received amount much higher than the remaining payable amount without any confirmation, which risks incorrect overpayments.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Show a confirm modal when the received amount exceeds <strong>10%</strong> above the rounded amount due (<code>Math.ceil</code>)</li>
+<li>Apply on both suggested amount selection and payment form submit</li>
+<li><strong>Continue</strong> keeps the selected amount and sends a Sentry warning (Slack alert pipeline)</li>
+<li><strong>Cancel</strong> discards the overpayment action</li>
+<li>No warning when amount ≤ threshold or equals pay-full</li>
+</ul>
+<hr>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3320">DELIANY-3320</a> [BackOffice] Add tab &quot;Payments&quot; &amp; show payment log details for bookings</h3>
+<p><strong>Issue:</strong> Booking details in Back Office had no dedicated Payments view, so users could not review payment status, history, deposits, or transaction details without leaving the flyout.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Add a <strong>Payments</strong> tab in booking details (Dine-in / Banquet)</li>
+<li>Show payment summary: total, paid, remaining, and status (Unpaid / Partially Paid / Paid)</li>
+<li>Show payment log table sorted by latest payment date/time</li>
+<li>Include deposit, full, payment-link, integrated, manual, cancelled, failed, and refunded records</li>
+<li>Calculate paid amount from successful payments only; deduct completed refunds</li>
+<li>Empty state: &quot;No payment records found.&quot;</li>
+</ul>
+<hr>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3339">DELIANY-3339</a> [Zum] Display Product Combo on Receipt</h3>
+<p><strong>Issue:</strong> Product Combo items were not shown correctly on receipts, so staff and guests could not see combo details when printing or viewing bills.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li><strong>Back Office</strong>
+<ul>
+<li>Order receipt: display Product Combo and its components</li>
+<li>Booking receipt: display Product Combo and its components</li>
+</ul>
 </li>
-<li>
-<p>Sidebar order page</p>
-<img width="800" height="600" alt="CleanShot 2026-08-03 at 23 03 21@2x" src="https://github.com/user-attachments/assets/1aa85bdc-2fda-4c8c-a2d5-771c74b89f03" />
-</li>
-<li>
-<p>Responsive Mobile, Ipad brand detail</p>
-<img width="500" height="800" alt="CleanShot 2026-08-03 at 22 54 33@2x" src="https://github.com/user-attachments/assets/b89ea478-a282-46f2-9b39-0143cfdec0fa" />
-</li>
-<li>
-<p>Responsive Mobile, Ipad location detail</p>
-<img width="500" height="800" alt="CleanShot 2026-08-03 at 22 56 52@2x" src="https://github.com/user-attachments/assets/73ac8acd-3d68-45c8-adea-b7c2d9cb7fd2" />
-<img width="500" height="800" alt="CleanShot 2026-08-03 at 22 59 00@2x" src="https://github.com/user-attachments/assets/d4d261db-09c0-4b90-baf6-cf488de004f6" />
-</li>
-<li>
-<p>Responsive Mobile, Ipad checkout cart</p>
-<img width="500" height="800" alt="CleanShot 2026-08-03 at 23 01 32@2x" src="https://github.com/user-attachments/assets/55a93cc0-bbbe-4e5c-9cea-08c4af4e3c6a" />
+<li><strong>POS</strong>
+<ul>
+<li>Order receipt: display Product Combo and its components</li>
+<li>Booking receipt: display Product Combo and its components</li>
+</ul>
 </li>
 </ul>
 
