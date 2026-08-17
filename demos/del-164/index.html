@@ -91,7 +91,6 @@
 <h3>[QH] Update footer on zumwhere.vn</h3>
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/1a042129-f4eb-416c-95e2-7f987a55258b" />
 <img width="415" height="806" alt="image" src="https://github.com/user-attachments/assets/cce6d9ec-4fc5-48d6-9f35-8eccc0991766" />
-<hr>
 <h3>[VuNH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3350">DELIANY-3350</a> [Bug] Duplicate transaction created on Payoo POS</h3>
 <h3>[VuNH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3349">DELIANY-3349</a> [Bug] Support multiple unit prices for the same product within one invoice</h3>
 <h3>[VuNH] Migrate everything to the new schema Storefront.</h3>
@@ -119,7 +118,41 @@
  GQL--&gt;&gt;App: 401
  App-&gt;&gt;BFF: refresh then retry once
  Note over App,BFF: still 401 then mint guest once
+
 </code></pre>
+<hr>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3338">DELIANY-3338</a> [POS] Hide add Tips in Rating &amp; Add tip screen in Confirm flow</h3>
+<p><strong>Issue:</strong> The POS order confirmation flow always showed both Rating and Add Tip, with no way to hide tips when a merchant only needs rating (or tip only).</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Configure the confirm-step UI via POS experiments: rating + tip, rating only, or tip only</li>
+<li>Hide Add Tip when rating-only is enabled; hide rating when tip-only is enabled</li>
+<li>Adjust layout and submit payload per mode (rating-only does not send tip; tip-only does not send rating)</li>
+<li>Skip the Rating &amp; Tip step when tips experiments are off</li>
+</ul>
+<!-- screenshot -->
+<hr>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/agiles/131-3/current?issue=DELIANY-3352">DELIANY-3352</a> [Bug][POS] Cannot edit table layout</h3>
+<p><strong>Issue:</strong> Opening or editing the POS table layout crashed (<code>Cannot read properties of undefined (reading 'position')</code> in JointJS stencil GridLayout), so staff could not edit floor plans.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Keep auto-generated cell ids when loading the default stencil shape and always provide a default <code>position</code></li>
+<li>Sanitize layout graph JSON before load: prune orphan <code>embeds</code>/<code>parent</code> refs and ensure cells have valid geometry</li>
+<li>Harden the layout editor lifecycle so load, area switch, and theme toggle do not crash</li>
+</ul>
+<!-- screenshot -->
+<hr>
+<h3>🚀 [TP] [Bug][Storefront] Fix PDP additions selection and cart summary UI</h3>
+<p><strong>Issue:</strong> Product detail additions did not follow admin config (checkbox-only instead of radio / quantity steppers), addition prices were missing, and the PDP cart showed order totals plus the amount on the Place Order button.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Match addition controls to config: radio for required pick-1, +/- steppers for multi-qty, checkbox for optional/multi</li>
+<li>Always show addition prices and scale addition quantities with the line quantity</li>
+<li>Hide Order Total / Promotion on the PDP cart and keep Place Order as a centered text-only CTA</li>
+<li>Show the service location phone on the OTP failed step instead of the customer/OTP number</li>
+</ul>
+<!-- screenshot -->
+<hr>
 
     </div>
   </body>
