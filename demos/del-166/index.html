@@ -82,6 +82,49 @@
 <li>Resolve production issues for configuration management.</li>
 </ul>
 <hr>
+<p>###🚀 [VuNH] Deploy and support seting web order</p>
+<p>https://demo.norra.ai</p>
+<h3>[VuNH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3373">DELIANY-3373</a> Allow backoffice user to configure Google Analytics and Google Ads Tracking</h3>
+<img width="800" height="600" alt="CleanShot 2026-09-21 at 15 18 39@2x" src="https://github.com/user-attachments/assets/a9b2be28-c7fc-4e02-9a54-ffaca736e9ed" />
+<img width="800" height="600" alt="CleanShot 2026-09-21 at 15 19 38@2x" src="https://github.com/user-attachments/assets/02ade3ee-6c56-4f78-9fd4-0782658e729d" />
+<h3>[VuNH] Implement tracking with configure Google Analytics and Google Ads Tracking</h3>
+<ul>
+<li>
+<p>Client side storefront web order</p>
+<img width="800" height="600" alt="CleanShot 2026-09-21 at 15 24 53@2x" src="https://github.com/user-attachments/assets/ab6dd548-c4a3-44f9-8bf2-2922ee8c1e1b" />
+</li>
+</ul>
+<p>Path storefront tracked:</p>
+<ul>
+<li>
+<p>/location/{slug} — PageView, AddToCart, RemoveFromCart, InitiateCheckout</p>
+</li>
+<li>
+<p>/products/{brand}/{product} — ViewItem, InitiateCheckout</p>
+</li>
+<li>
+<p>Header cart (mọi trang có header) — InitiateCheckout</p>
+</li>
+<li>
+<p>/checkout — AddPaymentInfo</p>
+</li>
+<li>
+<p>/checkout/confirm — Purchase</p>
+</li>
+<li>
+<p>/location/{slug}/reservation — ReservationPageView, GenerateLead</p>
+</li>
+<li>
+<p>/reservation/success — ReservationConfirmed</p>
+</li>
+<li>
+<p>Tracking server-side</p>
+</li>
+</ul>
+<h3>[VuNH] Add Creation Source</h3>
+<ul>
+<li>The purpose is to identify which website the order or booking originated from.</li>
+</ul>
 
     </div>
   </body>
