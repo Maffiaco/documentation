@@ -81,6 +81,82 @@
 <li>Add sitemap and robot for storefront (help Google and other bots know what to crawl)</li>
 <li>create the structure for an SEO page</li>
 </ul>
+<hr>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3443">DELIANY-3443</a> [Bug][Web] Wrong CTA label when editing cart item</h3>
+<ul>
+<li>[x] The product details modal opened from &quot;Edit&quot; shows &quot;Update • [total]&quot; instead of &quot;Add to cart&quot;</li>
+<li>[x] Clicking Update changes the existing cart item (quantity, note) instead of adding a new line</li>
+<li>[x] &quot;Add to cart&quot; only shows when adding a new item (menu card / &quot;Create new item&quot;)</li>
+</ul>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3434">DELIANY-3434</a> Missing data for Meta pixel tracking</h3>
+<ul>
+<li>[x] Send <code>value</code> and <code>currency</code> with the Meta pixel Purchase event</li>
+</ul>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3436">DELIANY-3436</a> [Web] Configure support contacts on the Reservation Success page</h3>
+<ul>
+<li>[x] Phone button uses the hotline of the selected service location</li>
+<li>[x] Zalo / Facebook buttons share the support contacts of the Tracking Order page, editable in the website editor, and open in a new tab</li>
+<li>[x] Hide a button if its contact is not configured; the remaining buttons fill the row</li>
+<li>[x] Hide the &quot;Need our help?&quot; section if no contact is configured</li>
+</ul>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3440">DELIANY-3440</a> [Bug][Web] Language switches from EN to VI when clicking footer links</h3>
+<ul>
+<li>[x] Footer links keep the selected language (EN stays EN)</li>
+<li>[x] Footer links (internal or external) open in the same tab</li>
+</ul>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3438">DELIANY-3438</a> [Improvement] Use new reservation form for all merchants on POS</h3>
+<ul>
+<li>[x] POS always uses the new reservation form, no need for <code>addReservationForm.enabled</code> in merchant settings</li>
+<li>[x] Remove the <code>enabled</code> flag checks</li>
+<li>[x] <code>disableBooking</code> keeps working (default <code>false</code>)</li>
+<li>[x] Remove the old reservation form from POS</li>
+</ul>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3424">DELIANY-3424</a> [Bug] Product combo avatar is removed during product editing</h3>
+<ul>
+<li>[x] Show the existing combo image on the Edit Product screen</li>
+<li>[x] Keep the image after saving unless the user removes or replaces it</li>
+</ul>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3426">DELIANY-3426</a> [Bug][Web] Missing estimate time of order</h3>
+<ul>
+<li>[x] Show the estimated time of the order on checkout &amp; order tracking</li>
+</ul>
+<h3>🚀 [TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3439">DELIANY-3439</a> [Improvement] Remove required asterisk from &quot;Over 10 Guests&quot; field</h3>
+<ul>
+<li>[x] Remove the red asterisk from the &quot;Over 10 Guests&quot; label, logic unchanged</li>
+</ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3444">DELIANY-3444</a> Send Purchase/Schedule events to Meta Conversions API (server-side tracking)</h3>
+<ul>
+<li>[x] Send <strong>Purchase</strong> (storefront orders) and <strong>Schedule</strong> (bookings) events to the Meta Conversions API, alongside GA4</li>
+<li>[x] <code>user_data</code>: email/phone normalized and SHA256-hashed, plus client IP and user agent</li>
+<li>[x] Standard event names are case-normalized (e.g. <code>purchase</code> → <code>Purchase</code>) so browser/server events dedupe; custom names kept as is</li>
+</ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3435">DELIANY-3435</a> [Bug] POS session switches to another account after logging into Back Office with a different account in a new tab</h3>
+<ul>
+<li>[x] Logging into Back Office with another account in a new tab no longer replaces the POS session</li>
+</ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3428">DELIANY-3428</a> [Bug][Web] Disabled/ hidden pages are still accessible via direct URL</h3>
+<ul>
+<li>[x] Location page and reservation page return 404 when the location/restaurant is deactivated or its page is hidden</li>
+<li>[x] &quot;Book now&quot; button is hidden under the same rules</li>
+<li><a href="https://github.com/Maffiaco/sicily/pull/3907">PR 3907</a></li>
+</ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3429">DELIANY-3429</a> [Improvement] Apply store on/off and opening-hour changes on go.zumwhere.vn immediately</h3>
+<ul>
+<li>[x] Reject new orders and reservations right after a store or feature is turned off in BackOffice</li>
+<li>[x] Time slots outside the new opening hours cannot be submitted</li>
+</ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3445">DELIANY-3445</a> [Improvement] Mobile storefront UX/UI &amp; accessibility fixes</h3>
+<ul>
+<li>[ ] Apply mobile storefront UX/UI &amp; accessibility fixes following the Figma design</li>
+</ul>
+<h3>[TP] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3432">DELIANY-3432</a> Centralize user management</h3>
+<ul>
+<li>[x] Merge Back-office Users and POS Users into one <strong>Users</strong> page (each user appears once, search + filter by application access)</li>
+<li>[x] Create user (email-first): existing email → open that user to grant POS/BackOffice access instead of creating a duplicate</li>
+<li>[x] Edit user: enable/disable BackOffice and POS access independently without resetting the password</li>
+<li>[x] Route permissions for list / add / edit; transfer ownership only for the current owner</li>
+<li>[ ] Separate POS password, &quot;Last login&quot; column (waiting for backend)</li>
+</ul>
 
     </div>
   </body>
