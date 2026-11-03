@@ -68,6 +68,29 @@
   <body>
     <div class="content">
       <h2>Sprint DEL-169</h2>
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3197">DELIANY-3430</a> [Improvement] Hide AccessTrade Code on Create Booking if not connected</h3>
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3430">DELIANY-3430</a> [Improvement] Hide AccessTrade Code on Create Booking if not connected</h3>
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3423">DELIANY-3423</a> [BackOffice] Allow user to assign menu categories during product creating/editing</h3>
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3425">DELIANY-3425</a> [BackOffice] Display combo name in order details</h3>
+<img width="875" height="542" alt="image" src="https://github.com/user-attachments/assets/592ffd0f-1b7c-4c6b-b357-a3f2a7e2d703" />
+<h3>[QH] 🚀 <a href="https://deliany.youtrack.cloud/issue/DELIANY-3442">DELIANY-3442</a> [Bug][Web] Combo still shows on Web Order after its category is deactivated</h3>
+<h3>[QH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3433">DELIANY-3433</a> Create new merchant notification channel</h3>
+<ul>
+<li>After the merchant enters their password, a notification mechanism will be triggered to alert the team via email and Slack.</li>
+<li>Mark key milestones upon merchant completion to track progress and provide timely support.</li>
+<li>Monitor and verify merchants registering through the API console.</li>
+<li>Every day at 9:00 AM, a summary message will be sent to Slack to track merchant activity.</li>
+</ul>
+<h3>[QH] [POS] Error boundaries: a crash no longer blanks the app</h3>
+<ul>
+<li>Errors are caught at every level (app, screen, section), so a crash only affects its own part and staff can keep working.</li>
+<li>Each fallback screen shows an error code and a Reload/Try again button. The error clears when moving to another screen or order, and is reported to Sentry.</li>
+<li>After a new deploy, POS asks to reload instead of auto-reloading, so orders being entered are not lost.</li>
+<li>Background features (new order alerts, printing, QR orders, menu sync) show a warning banner instead of failing silently. A failed print job is dropped and the user is asked to print again.</li>
+<li>QC can test the fallbacks on <code>/dev/crash</code> (staging only).</li>
+<li>Next: the same protection for Biz (back office) and Storefront (web order).</li>
+</ul>
+<hr>
 <h3>🚀 [VuNH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3437">DELIANY-3437</a> Filter the product list by the selected brand and re-validate combo items when the brand changes</h3>
 <img width="2942" height="1594" alt="CleanShot 2026-11-02 at 15 58 32@2x" src="https://github.com/user-attachments/assets/9892e690-b339-4a82-b4c2-af9d3b0bca26" />
 <h3>🚀 [VuNH] <a href="https://deliany.youtrack.cloud/issue/DELIANY-3366">DELIANY-3366</a> [Bug][BackOffice] NAPAS transactions shown for merchant without NAPAS configured</h3>
